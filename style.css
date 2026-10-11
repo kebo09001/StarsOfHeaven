@@ -1,12 +1,34 @@
 html, body { height: 100%; margin: 0; padding: 0;}
 
-.container{
+.containerA{
     display: grid;
     grid-template-columns: 250px 1fr 1fr 250px;
     grid-template-rows: 150px 450px 150px;
     grid-template-areas:
     "header header header header"
-    "main . . article"
+    "main main article article"
+    "footer footer footer footer"
+}
+.containerB{
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr 250px;
+    grid-template-rows: 150px 350px 350px 350px 350px 150px;
+    grid-template-areas:
+    "header header header header"
+    "main main article article"
+    "main main article article"
+    "main main article article"
+    "main main article article"
+    "footer footer footer footer"
+}
+.containerC{
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr 250px;
+    grid-template-rows: 150px 650px 350px 150px;
+    grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "article article article article"
     "footer footer footer footer"
 }
 
@@ -15,45 +37,68 @@ html, body { height: 100%; margin: 0; padding: 0;}
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     background-color: gray;
     grid-column: 2/4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.lank{
-    color: yellow;
-    text-decoration: none;
 }
 .filler{
-    grid-column: 4/5;
     background-color: #575757;
 }
 .navigation{
     grid-column: 1/2;
     background-color: #575757;
 }
-.information{
-    background-color: #3b3b3b;
-    color: white;
-    grid-column: 1/3;
-    font-size: 30px;
+.information2{
+    grid-row: 3/4;
+}
+.information3{
+    grid-row: 4/5;
+}
+.information4{
+    grid-row: 5/6;
 }
 .bildsektion{
-    background-color: #3b3b3b;
+    grid-row: 2/3;
+}
+.bildsektion2{
     grid-column: 3/5;
+    grid-row: 3/4;
 }
-.super{
-    background-color: gray;
-    grid-column: 1/5
+.bildsektion3{
+    grid-column: 3/5;
+    grid-row: 4/5;
 }
-header{
-    grid-area: header;
+.bildsektion4{
+    grid-column: 3/5;
+    grid-row: 5/6;
+}
+.topplatar{
+    background-color: #113733;
+    font-size: 30px;
+}
+.centre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    color: yellow;
+    text-decoration: none;
 }
 main{
     grid-area: main;
-}
+    color: white;
+    font-size: 30px;
+    }
 article{
     grid-area: article;
+    color: white;
+    font-size: 30px;    
+}
+main:nth-child(even), article:nth-child(odd){
+    background-color: #3b3b3b;
+}
+main:nth-child(odd), article:nth-child(even){
+    background-color: #444444;
 }
 footer{
     grid-area: footer;
+    background-color: gray;
 }
