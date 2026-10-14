@@ -3,10 +3,10 @@ html, body { height: 100%; margin: 0; padding: 0;}
 .containerindex{
     display: grid;
     border: 30px white dashed;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0px auto;
     grid-template-columns: 250px 1fr 1fr 250px;
-    grid-template-rows: 100px 100px 450px 100px;
+    grid-template-rows: 100px 75px auto 100px;
     grid-template-areas:
     "header header header header"
     "nav nav nav nav"
@@ -16,10 +16,10 @@ html, body { height: 100%; margin: 0; padding: 0;}
 .containergruppmedlemmar{
     display: grid;
     border: 30px white dashed;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0px auto;
     grid-template-columns: 250px 1fr 1fr 250px;
-    grid-template-rows: 100px 100px 350px 350px 350px 350px 100px;
+    grid-template-rows: 100px 75px 350px 350px 350px 350px 100px;
     grid-template-areas:
     "header header header header"
     "nav nav nav nav"
@@ -32,10 +32,10 @@ html, body { height: 100%; margin: 0; padding: 0;}
 .containeralbum{
     display: grid;
     border: 30px white dashed;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0px auto;
     grid-template-columns: 250px 1fr 1fr 250px;
-    grid-template-rows: 100px 100px 550px 1000px 100px;
+    grid-template-rows: 100px 75px 550px 950px 100px;
     grid-template-areas:
     "header header header header"
     "nav nav nav nav"
@@ -48,14 +48,13 @@ html, body { height: 100%; margin: 0; padding: 0;}
     font-size: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     background-color: rgb(4, 136, 148);
-    grid-column: 2/4;
 }
 .filler{
     background-color: #001e68;
 }
 .navigation{
-    grid-column: 1/2;
     background-color: #001e68;
+    grid-area: nav;
 }
 .Namn1{
     grid-row: 3/4;
@@ -90,8 +89,12 @@ html, body { height: 100%; margin: 0; padding: 0;}
     grid-row: 6/7;
 }
 .topplatar{
-    background-color: #113733;
     font-size: 30px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 50px;
+    box-shadow: 10px 10px 5px 10px #13495b;
 }
 .studioalbum{
     grid-column: 1/3;
@@ -113,6 +116,13 @@ html, body { height: 100%; margin: 0; padding: 0;}
 .imageadjust{
     width: 90%;
 }
+.albumimage{
+    width: 30%;
+    height: auto;
+}
+.groupimage{
+    text-align: center;
+}
 a{
     color: yellow;
     text-decoration: none;
@@ -127,12 +137,6 @@ article{
     color: white;
     font-size: 30px;    
 }
-main:nth-child(even), article:nth-child(odd){
-    background-color: #124197;
-}
-main:nth-child(odd), article:nth-child(even){
-    background-color: #121a90;
-}
 footer{
     grid-area: footer;
     background-color: #001e68;
@@ -140,10 +144,41 @@ footer{
     font-size: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.albumimage{
-    width: 30%;
-    height: auto;
+header{
+    grid-area: header;
 }
-.groupimage{
-    text-align: center;
+main:nth-child(even), article:nth-child(odd){
+    background-color: #124197;
+}
+main:nth-child(odd), article:nth-child(even){
+    background-color: #121a90;
+}
+.navigation ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.navigation ul li{
+    background: rgb(1, 44, 138);
+    padding: 5px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    border: 2px solid rgb(4, 58, 176);
+}
+.navigation a{
+     color: white;
+}
+.navigation a:hover{
+     color: yellow;
+     transform: rotate(180deg);
+}
+.studioalbum ul,
+.epskivor ul{
+    list-style: none;
+}
+h1{
+    font-size: 40px;
+}
+.extrapadding{
+    padding: 30px;
 }
