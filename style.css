@@ -138,7 +138,6 @@ article{
     font-size: 30px;    
 }
 figure{
-    grid-area: figure;
     background: #121a90;
     margin: 0;
 }
@@ -188,6 +187,9 @@ h1{
 }
 #marked{
     border: 2px solid rgb(122, 150, 212);
+}
+figure.aligncentre{
+    grid-area: figure;
 }
 main.grupp{
     display: grid;
