@@ -10,7 +10,7 @@ html, body { height: 100%; margin: 0; padding: 0;}
     grid-template-areas:
     "header header header header"
     "nav nav nav nav"
-    "main main article article"
+    "main main figure figure"
     "footer footer footer footer"
 }
 .containergruppmedlemmar{
@@ -19,15 +19,14 @@ html, body { height: 100%; margin: 0; padding: 0;}
     max-width: 1000px;
     margin: 0px auto;
     grid-template-columns: 250px 1fr 1fr 250px;
-    grid-template-rows: 100px 75px 350px 350px 350px 350px 100px;
+    grid-template-rows: 100px 75px auto 100px;
+    
     grid-template-areas:
     "header header header header"
     "nav nav nav nav"
-    "main main article article"
-    "main main article article"
-    "main main article article"
-    "main main article article"
-    "footer footer footer footer"
+    "main main main main"
+    "footer footer footer footer";
+
 }
 .containeralbum{
     display: grid;
@@ -35,7 +34,7 @@ html, body { height: 100%; margin: 0; padding: 0;}
     max-width: 1000px;
     margin: 0px auto;
     grid-template-columns: 250px 1fr 1fr 250px;
-    grid-template-rows: 100px 75px 550px 950px 100px;
+    grid-template-rows: 100px 75px auto auto 100px;
     grid-template-areas:
     "header header header header"
     "nav nav nav nav"
@@ -132,11 +131,16 @@ main{
     grid-area: main;
     color: white;
     font-size: 30px;
+        
     }
 article{
-    grid-area: article;
     color: white;
     font-size: 30px;    
+}
+figure{
+    grid-area: figure;
+    background: #121a90;
+    margin: 0;
 }
 footer{
     grid-area: footer;
@@ -184,4 +188,9 @@ h1{
 }
 #marked{
     border: 2px solid rgb(122, 150, 212);
+}
+main.grupp{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
